@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
           if (snapshot.hasData) {
             return HomeScreen();
           } else {
-            return LoginScreen();
+            return AuthPage();
           }
         }),
       ),
