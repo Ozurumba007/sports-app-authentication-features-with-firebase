@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:sports_app/screens/login_screen.dart';
 import 'package:get/get.dart';
 
+import 'authentication/auth_page.dart';
 import 'screens/home_screen.dart';
 
 void main() async {

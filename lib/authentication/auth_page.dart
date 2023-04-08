@@ -4,7 +4,7 @@ import '../screens/login_screen.dart';
 import '../screens/register_screen.dart';
 
 class AuthPage extends StatefulWidget {
-  AuthPage({Key? key}) : super(key: key);
+  const AuthPage({Key? key}) : super(key: key);
 
   @override
   State<AuthPage> createState() => _AuthPageState();
@@ -13,12 +13,23 @@ class AuthPage extends StatefulWidget {
 class _AuthPageState extends State<AuthPage> {
   // initially show the login page
   bool showLoginScreen = true;
+
+  void toggleScreens() {
+    setState(() {
+      showLoginScreen = !showLoginScreen;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     if (showLoginScreen) {
-      return LoginScreen(showRegisterScreen: showRegisterScreen);
+      return LoginScreen(
+        showRegisterScreen: toggleScreens,
+      );
     } else {
-      RegisterScreen();
+      return RegisterScreen(
+        showLoginScreen: toggleScreens,
+      );
     }
   }
 }

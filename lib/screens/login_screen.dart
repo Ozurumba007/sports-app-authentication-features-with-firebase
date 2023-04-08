@@ -5,7 +5,10 @@ import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
   final VoidCallback showRegisterScreen;
-  LoginScreen({Key? key, required this.showRegisterScreen}) : super(key: key);
+  LoginScreen({
+    Key? key,
+    required this.showRegisterScreen,
+  }) : super(key: key);
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -48,14 +51,23 @@ class _LoginScreenState extends State<LoginScreen> {
                   size: 100,
                 ),
 
+                // Hello There
+
+                Text(
+                  'Hello There',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 45,
+                  ),
+                ),
                 // Welcome BAck text
 
                 SizedBox(height: 40),
                 Text(
-                  'Welcome Back!',
+                  'Welcome back, you\'ve been missed',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 30,
+                    fontSize: 20,
                   ),
                 ),
 

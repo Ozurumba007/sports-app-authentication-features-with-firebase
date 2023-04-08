@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatefulWidget {
-  RegisterScreen({Key? key}) : super(key: key);
+  final VoidCallback showLoginScreen;
+  const RegisterScreen({
+    Key? key,
+    required this.showLoginScreen,
+  }) : super(key: key);
 
   @override
   State<RegisterScreen> createState() => _RegisterScreenState();
@@ -17,6 +21,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
     _passwordController.dispose();
     super.dispose();
   }
+
+  Future signUp() async {}
 
   @override
   Widget build(BuildContext context) {
@@ -35,14 +41,23 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   size: 100,
                 ),
 
-                // Welcome BAck text
+                // Hi there
+                Text(
+                  'Hi There',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 45,
+                  ),
+                ),
+
+                // Register Below with your Detail
 
                 SizedBox(height: 40),
                 Text(
-                  'Welcome Back!',
+                  'Register Below with your Detail',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 30,
+                    fontSize: 20,
                   ),
                 ),
 
@@ -115,7 +130,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     horizontal: 25.0,
                   ),
                   child: GestureDetector(
-                    onTap: signIn,
+                    onTap: signUp,
                     child: Container(
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
@@ -151,7 +166,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     SizedBox(width: 10),
                     GestureDetector(
-                      onTap: widget.showRegisterScreen,
+                      onTap: widget.showLoginScreen,
                       child: Text(
                         'Register now',
                         style: TextStyle(
