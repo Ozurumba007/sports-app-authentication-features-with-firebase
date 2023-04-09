@@ -118,7 +118,28 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 // DropDown menu for the special interest of the users
                 SizedBox(height: 10),
 
-                DropDownMenu(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey[200],
+                          border: Border.all(
+                            color: Colors.white,
+                          ),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: DropDownMenu(),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
                 // sign Up button
 
                 SizedBox(height: 20),

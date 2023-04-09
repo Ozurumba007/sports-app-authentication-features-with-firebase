@@ -26,6 +26,31 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat_rounded),
+            label: 'Buddies',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add_circle),
+            label: 'Discover',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+          ),
+        ],
+      ),
     );
   }
 }
