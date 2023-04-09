@@ -2,6 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:sports_app/widgets/drop_menu.dart';
 
 import '../widgets/a_member_text.dart';
@@ -114,6 +115,25 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ConfirmPasswordTextfield(
                   confirmpasswordController: _confirmpasswordController,
                 ),
+
+                // // phone Number textfield
+
+                // SizedBox(height: 10),
+
+                // Container(
+                //   height: 70,
+                //   child: Padding(
+                //     padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                //     child: IntlPhoneField(
+                //       decoration: InputDecoration(
+                //         labelText: 'Phone Number',
+                //         border: OutlineInputBorder(
+                //           borderSide: BorderSide(),
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
 
                 // DropDown menu for the special interest of the users
                 SizedBox(height: 10),
