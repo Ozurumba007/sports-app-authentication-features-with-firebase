@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sports_app/widgets/drop_menu.dart';
 
+import '../widgets/confirm_password_textfield.dart';
 import '../widgets/password_textfield.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -131,32 +132,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 // confirm password textfield
 
                 SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 25.0,
-                  ),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      border: Border.all(
-                        color: Colors.white,
-                      ),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        left: 20.0,
-                      ),
-                      child: TextFormField(
-                        controller: _confirmpasswordController,
-                        decoration: InputDecoration(
-                          hintText: 'Confirm Password',
-                          border: InputBorder.none,
-                        ),
-                        obscureText: true,
-                      ),
-                    ),
-                  ),
+                ConfirmPasswordTextfield(
+                  confirmpasswordController: _confirmpasswordController,
                 ),
 
                 // DropDown menu for the special interest of the users
