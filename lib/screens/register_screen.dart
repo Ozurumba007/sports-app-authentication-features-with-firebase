@@ -4,7 +4,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sports_app/widgets/drop_menu.dart';
 
+import '../widgets/a_member_text.dart';
 import '../widgets/confirm_password_textfield.dart';
+import '../widgets/email_textfield.dart';
 import '../widgets/password_textfield.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -171,69 +173,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
                 SizedBox(height: 10),
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'You are a Member?',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(width: 10),
-                    GestureDetector(
-                      onTap: widget.showLoginScreen,
-                      child: Text(
-                        'Login now',
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
-                )
+                AMemberText(widget: widget)
               ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class EmailTextfield extends StatelessWidget {
-  const EmailTextfield({
-    Key? key,
-    required TextEditingController emailController,
-  })  : _emailController = emailController,
-        super(key: key);
-
-  final TextEditingController _emailController;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 25.0,
-      ),
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.grey[200],
-          border: Border.all(
-            color: Colors.white,
-          ),
-          borderRadius: BorderRadius.circular(12),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.only(
-            left: 20.0,
-          ),
-          child: TextFormField(
-            controller: _emailController,
-            decoration: InputDecoration(
-              hintText: 'Email',
-              border: InputBorder.none,
             ),
           ),
         ),
