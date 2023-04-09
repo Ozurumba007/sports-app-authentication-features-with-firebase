@@ -26,7 +26,7 @@ class _DropDownMenuState extends State<DropDownMenu> {
       elevation: 16,
       style: const TextStyle(color: Colors.deepPurple),
       underline: Container(
-        height: 5,
+        height: 3,
         color: Colors.deepPurple,
       ),
       onChanged: (String? value) {
