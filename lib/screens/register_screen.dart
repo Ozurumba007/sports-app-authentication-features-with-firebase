@@ -61,6 +61,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
 
                 // Hi there
+                SizedBox(height: 30),
                 Text(
                   'Hi There',
                   style: TextStyle(
@@ -71,7 +72,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
                 // Register Below with your Detail
 
-                SizedBox(height: 40),
+                SizedBox(height: 10),
                 Text(
                   'Register Below with your Detail',
                   style: TextStyle(

@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
 
                 // Hello There
-
+                SizedBox(height: 30),
                 Text(
                   'Hello There',
                   style: TextStyle(
@@ -62,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 // Welcome BAck text
 
-                SizedBox(height: 40),
+                SizedBox(height: 10),
                 Text(
                   'Welcome back, you\'ve been missed',
                   style: TextStyle(
