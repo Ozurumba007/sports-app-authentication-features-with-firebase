@@ -132,6 +132,25 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
 
+                // forgot Password button
+
+                SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        'Forgot Password?',
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
                 // sign in button
 
                 SizedBox(height: 10),
