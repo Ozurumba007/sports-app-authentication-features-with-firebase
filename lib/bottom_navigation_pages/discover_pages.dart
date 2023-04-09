@@ -6,7 +6,7 @@ class DiscoverNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Discover'),
+      body: Center(child: Text('Discover')),
     );
   }
 }

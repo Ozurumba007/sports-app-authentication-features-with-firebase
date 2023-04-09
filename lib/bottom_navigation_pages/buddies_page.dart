@@ -6,7 +6,7 @@ class BuddiesNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Buddies'),
+      body: Center(child: Text('Buddies St')),
     );
   }
 }

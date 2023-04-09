@@ -6,7 +6,7 @@ class HomeNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Home'),
+      body: Center(child: Text('Home')),
     );
   }
 }
