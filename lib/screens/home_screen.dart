@@ -13,7 +13,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
-  static const List<Widget> _widgetOptions = <Widget>[
+  final List<Widget> _pages = <Widget>[
     Text(
       'Home',
       style: TextStyle(fontSize: 24),
@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text('Signed In as ' + user.email!),
-          _widgetOptions.elementAt(_selectedIndex),
+          _pages.elementAt(_selectedIndex),
           MaterialButton(
             onPressed: () {
               FirebaseAuth.instance.signOut();
