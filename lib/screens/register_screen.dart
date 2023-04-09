@@ -15,15 +15,18 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+  final _fullnameController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmpasswordController = TextEditingController();
 
   @override
   void dispose() {
+    _fullnameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
     _confirmpasswordController.dispose();
+
     super.dispose();
   }
 

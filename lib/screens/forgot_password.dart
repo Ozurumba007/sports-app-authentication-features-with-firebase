@@ -27,8 +27,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            content: Text(
-                'Pa ssword reset link has been sent to your Email Address'),
+            content:
+                Text('Password reset link has been sent to your Email Address'),
           );
         },
       );
@@ -86,7 +86,6 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     hintText: 'Password',
                     border: InputBorder.none,
                   ),
-                  obscureText: true,
                 ),
               ),
             ),

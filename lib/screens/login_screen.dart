@@ -74,7 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontSize: 45,
                   ),
                 ),
-                // Welcome BAck text
+                // Welcome Back text
 
                 SizedBox(height: 10),
                 Text(
