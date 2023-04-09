@@ -13,6 +13,29 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text(
+      'Home',
+      style: TextStyle(fontSize: 24),
+    ),
+    Text(
+      'Buddies',
+      style: TextStyle(fontSize: 24),
+    ),
+    Text(
+      'Discover',
+      style: TextStyle(fontSize: 24),
+    ),
+    Text(
+      'Profile',
+      style: TextStyle(fontSize: 24),
+    ),
+    Text(
+      'Settings',
+      style: TextStyle(fontSize: 24),
+    ),
+  ];
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -27,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text('Signed In as ' + user.email!),
+          _widgetOptions.elementAt(_selectedIndex),
           MaterialButton(
             onPressed: () {
               FirebaseAuth.instance.signOut();
