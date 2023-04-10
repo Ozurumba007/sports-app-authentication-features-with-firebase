@@ -95,9 +95,71 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ),
 
-                // email textfield
+                // first name textfield
 
                 SizedBox(height: 20),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 25.0,
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      border: Border.all(
+                        color: Colors.white,
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 20.0,
+                      ),
+                      child: TextFormField(
+                        controller: _firstNameController,
+                        decoration: InputDecoration(
+                          hintText: 'First Name',
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+
+                // Last Name Textfield
+
+                SizedBox(height: 10),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 25.0,
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      border: Border.all(
+                        color: Colors.white,
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 20.0,
+                      ),
+                      child: TextFormField(
+                        controller: _lastNameController,
+                        decoration: InputDecoration(
+                          hintText: 'Last Name',
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+
+                // email textfield
+
+                SizedBox(height: 10),
                 EmailTextfield(
                   emailController: _emailController,
                 ),
@@ -115,25 +177,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ConfirmPasswordTextfield(
                   confirmpasswordController: _confirmpasswordController,
                 ),
-
-                // // phone Number textfield
-
-                // SizedBox(height: 10),
-
-                // Container(
-                //   height: 70,
-                //   child: Padding(
-                //     padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                //     child: IntlPhoneField(
-                //       decoration: InputDecoration(
-                //         labelText: 'Phone Number',
-                //         border: OutlineInputBorder(
-                //           borderSide: BorderSide(),
-                //         ),
-                //       ),
-                //     ),
-                //   ),
-                // ),
 
                 // DropDown menu for the special interest of the users
                 SizedBox(height: 10),
