@@ -66,14 +66,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Logo
-
-                SizedBox(height: 10),
-                Icon(
-                  Icons.sports_basketball,
-                  size: 100,
-                ),
-
                 // Hi there
                 SizedBox(height: 30),
                 Text(
