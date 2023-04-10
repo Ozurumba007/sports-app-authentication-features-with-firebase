@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:sports_app/screens/login_screen.dart';
 import 'package:get/get.dart';
+import 'package:sports_app/screens/verify_email_address.dart';
 
 import 'authentication/auth_page.dart';
 import 'screens/home_screen.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: ((context, snapshot) {
           if (snapshot.hasData) {
-            return HomeScreen();
+            return VerifyEmailScreen();
           } else {
             return AuthPage();
           }
