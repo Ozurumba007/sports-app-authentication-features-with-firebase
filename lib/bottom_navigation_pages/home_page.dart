@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:sports_app/widgets/get_user_name.dart';
 
 class HomeNavBar extends StatefulWidget {
   const HomeNavBar({Key? key}) : super(key: key);
@@ -13,25 +12,6 @@ class HomeNavBar extends StatefulWidget {
 class _HomeNavBarState extends State<HomeNavBar> {
   final user = FirebaseAuth.instance.currentUser!;
 
-  List<String> docIDs = [];
-
-  Future getDocId() async {
-    await FirebaseFirestore.instance.collection('users').get().then(
-          (snapshot) => snapshot.docs.forEach(
-            (document) {
-              print(document.reference);
-              docIDs.add(document.reference.id);
-            },
-          ),
-        );
-  }
-
-  @override
-  void initState() {
-    getDocId();
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,17 +20,6 @@ class _HomeNavBarState extends State<HomeNavBar> {
           Center(
             child: Text('Welcome' + user.email!),
           ),
-          Expanded(
-              child: FutureBuilder(
-            future: getDocId(),
-            builder: (context, snapshot) {
-              return ListView.builder(itemBuilder: (context, index) {
-                return ListTile(
-                  title: GetUserName(documentId: docIDs[index]),
-                );
-              });
-            },
-          )),
         ],
       ),
     );
