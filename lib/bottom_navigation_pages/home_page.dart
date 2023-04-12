@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:sports_app/widgets/get_user_name.dart';
 
 class HomeNavBar extends StatefulWidget {
   const HomeNavBar({Key? key}) : super(key: key);
@@ -45,7 +46,7 @@ class _HomeNavBarState extends State<HomeNavBar> {
             builder: (context, snapshot) {
               return ListView.builder(itemBuilder: (context, index) {
                 return ListTile(
-                  title: Text(docIDs[index]),
+                  title: GetUserName(documentId: docIDs[index]),
                 );
               });
             },
