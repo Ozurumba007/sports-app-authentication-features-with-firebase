@@ -62,11 +62,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
     String lastName,
     String email,
   ) async {
-    await FirebaseFirestore.instance.collection('users').add({
-      'first name': firstName,
-      'last name': lastName,
-      'email': email,
-    });
+    await FirebaseFirestore.instance.collection('users').add(
+      {
+        'first name': firstName,
+        'last name': lastName,
+        'email': email,
+      },
+    );
   }
 
   bool passwordConfirmed() {
@@ -175,6 +177,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 SizedBox(height: 10),
                 EmailTextfield(
                   emailController: _emailController,
+                  text: 'Email',
                 ),
 
                 // password textfield

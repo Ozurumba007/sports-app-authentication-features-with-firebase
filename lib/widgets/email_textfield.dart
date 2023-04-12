@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class EmailTextfield extends StatelessWidget {
+  final String text;
   const EmailTextfield({
     Key? key,
+    required this.text,
     required TextEditingController emailController,
   })  : _emailController = emailController,
         super(key: key);
@@ -30,7 +32,7 @@ class EmailTextfield extends StatelessWidget {
           child: TextFormField(
             controller: _emailController,
             decoration: InputDecoration(
-              hintText: 'Email',
+              hintText: text,
               border: InputBorder.none,
             ),
           ),
